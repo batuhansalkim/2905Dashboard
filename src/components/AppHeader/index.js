@@ -1,5 +1,5 @@
 import {MailOutlined,BellFilled} from "@ant-design/icons"
-import {Image,Typography,Space} from "antd";
+import {Image,Typography,Space, Badge} from "antd";
 
 function AppHeader() {
     return (
@@ -8,8 +8,13 @@ function AppHeader() {
             />
             <Typography.Title>Batuhan's Dashboard</Typography.Title>
             <Space>
-                <MailOutlined/>
-                <BellFilled/>
+                <Badge count={20} dot>
+                    <MailOutlined style={{ fontSize: 24, cursor: "pointer" }}/>
+                </Badge>
+                <Badge count={10} dot>
+                    <BellFilled style={{ fontSize: 24, cursor: "pointer" }}/>
+                </Badge>
+                
             </Space>
         </div>
     )
