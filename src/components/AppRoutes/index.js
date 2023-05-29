@@ -1,6 +1,6 @@
 function AppRoutes() {
     return (
-        <div>
+        <div className="AppRoutes">
             aproutes
         </div>
     )

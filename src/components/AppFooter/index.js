@@ -1,6 +1,6 @@
 function AppFooter(){
     return(
-        <div>
+        <div className="AppFooter">
         appfooter
         </div>
     )

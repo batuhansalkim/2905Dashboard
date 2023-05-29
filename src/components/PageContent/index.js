@@ -1,6 +1,6 @@
 function PageContent() {
     return (
-        <div>
+        <div className="PageContent">
             pagecontent
         </div>
     )

@@ -1,6 +1,6 @@
 function SideMenu() {
     return (
-        <div>
+        <div className="SideMenu">
             sidemenu
         </div>
     )
