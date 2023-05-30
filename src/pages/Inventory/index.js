@@ -2,7 +2,7 @@ import { Typography } from "antd";
 function Inventory() {
     return (
         <div>
-            <Typography.Text>Dashboard</Typography.Text>
+            <Typography.Text>Inventory</Typography.Text>
         </div>
     )
 }

@@ -6,4 +6,4 @@ function Orders() {
         </div>
     )
 }
-export default Inventory;
+export default Orders;
