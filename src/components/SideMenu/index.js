@@ -9,7 +9,9 @@ import { Menu } from "antd";
 function SideMenu() {
     return (
         <div className="SideMenu">
-            <Menu items={[
+            <Menu onClick={(item)=>{
+                alert("btu")
+            }} items={[
             {
                 label:"Dashboard",
                 icon:<AppstoreOutlined/>,
