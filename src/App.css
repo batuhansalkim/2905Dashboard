@@ -24,6 +24,9 @@
 
 }
 .SideMenuAndPageContent{
+  display: flex;
+  flex: 1;
+
 }
 .SideMenu{
   height: 100%;
