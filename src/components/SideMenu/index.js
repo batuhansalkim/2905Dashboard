@@ -7,12 +7,13 @@ import {
 import { Menu } from "antd";
 import { useNavigate } from "react-router-dom";
 function SideMenu() {
+    
     const navigate = useNavigate();
     return (
         <div className="SideMenu">
             <Menu onClick={(item)=>{
-               navigate(item.key);
-            }} items={[
+                navigate(item.key)
+            }}  items={[
             {
                 label:"Dashboard",
                 icon:<AppstoreOutlined/>,
