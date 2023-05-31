@@ -2,7 +2,7 @@ import { Typography } from "antd";
 function Inventory() {
     return (
         <div>
-            <Typography.Text>Inventory</Typography.Text>
+            <Typography.Title level={4}>Inventory</Typography.Title>
         </div>
     )
 }
