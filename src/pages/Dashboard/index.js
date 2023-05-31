@@ -1,5 +1,7 @@
 import { ShoppingCartOutlined, ShoppingOutlined,UserOutlined,DollarCircleOutlined } from "@ant-design/icons"
-import { Typography,Card,Space,Statistic } from "antd";
+import { Typography,Card,Space,Statistic, Table } from "antd";
+import { useEffect, useState } from "react";
+import { getOrders } from "../../API";
 
 
 function Dashboard() {
@@ -15,6 +17,9 @@ function Dashboard() {
 
                 <DashboardCard icon={<DollarCircleOutlined style={{ color: "red", backgroundColor: "rgba(255,0,0,0.25)", borderRadius: 20, fontSize: 24, padding: 8 }} />} title={"Revenue"} value={1246}/>
             </Space>
+            <Space>
+                <RecentOrders/>
+            </Space>
         </div>
     )
 }
@@ -27,6 +32,36 @@ function DashboardCard({title,value,icon}){
                 <Statistic title={title} value={value}/>
             </Space>
         </Card>
+    )
+}
+function RecentOrders(){
+    const [dataSource,setDataSource] = useState([]);
+    const [loading,setLoading] = useState(false);
+
+    useEffect(()=>{
+        setLoading(true);
+        getOrders().then(res=>{
+            setDataSource(res.products);
+            setLoading(false);   
+        });
+    },[])
+    return(
+        <Table columns={[
+            {
+                title:"Title",
+                dataIndex:"title"
+            },
+            {
+                title:"Quantity",
+                dataIndex:"quantity",
+            },
+            {
+                title:"Price",
+                dataIndex:"discountedPrice"
+            }
+        ]}>
+
+        </Table>
     )
 }
 export default Dashboard;
