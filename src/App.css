@@ -25,7 +25,7 @@
 .SideMenuAndPageContent{
   display: flex;
   flex: 1;
-  background: red;
+  background:blue;
   justify-content: flex-start;
   align-items: flex-start;
 
@@ -34,6 +34,7 @@
 }
 .SideMenu{
   height: 100%;
+  background: green;
   
 }
 .SideMenuVertical{
